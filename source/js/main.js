@@ -1,3 +1,9 @@
+// No Js
+try {
+  document.querySelector('.header__top').classList.remove('header__top-open');
+  document.querySelector('.header__bottom').classList.remove('header__bottom-open');
+} catch {}
+
 // Swiper
 try {
   let swiper = new Swiper(".mySwiper", {
@@ -25,7 +31,6 @@ try {
     },
   });
 } catch {};
-
 
 // Accordion
 try {
@@ -110,7 +115,6 @@ try {
   });
 } catch {};
 
-
 // Validation
 try {
   let form = document.querySelector('.form-login')
@@ -126,7 +130,6 @@ try {
     }
   })
 } catch {};
-
 
 // Filter toggle
 try {
@@ -176,7 +179,8 @@ try {
     if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
       sliderOne.value = parseInt(sliderTwo.value) - minGap;
     }
-    displayValOne.textContent = sliderOne.value;
+    displayValOne.textContent = sliderOne.value + ' $';
+    displayValOne.style.left = (sliderOne.value / 2) + '%';
     fillColor();
   }
 
@@ -184,7 +188,9 @@ try {
     if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
       sliderTwo.value = parseInt(sliderOne.value) + minGap;
     }
-    displayValTwo.textContent = sliderTwo.value;
+    displayValTwo.textContent = sliderTwo.value + ' $';
+    displayValTwo.style.left = (sliderTwo.value / 2) + '%';
+
     fillColor();
   }
 

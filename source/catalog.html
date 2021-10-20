@@ -19,7 +19,7 @@
 <body>
   <header class="page__header header">
     <h1 class="visually-hidden">SHOP</h1>
-    <div class="header__top">
+    <div class="header__top header__top-open">
 
       <div class="container header__container">
 
@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="header__bottom">
+    <div class="header__bottom header__bottom-open">
       <nav class="navigation container">
         <ul class="navigation__list">
           <li class="navigation__item _hidden">
@@ -97,9 +97,6 @@
         </ul>
       </nav>
     </div>
-
-
-
   </header>
 
   <main class="page__main main">
@@ -221,14 +218,14 @@
                   </button>
                 </header>
                 <div class="accordion__content form-filter__content range-slider">
-                  <div class="value">
-                    <span class="range-slider__value" id="range-slider-value-1">0</span>
-                    <span class="range-slider__value" id="range-slider-value-2">0</span>
-                  </div>
                   <div class="range-slider__body">
                     <div class="range-slider__track"></div>
                     <input type="range" min="10" max="200" step="5" value="30" id="range-slider-1" oninput="slideOne()">
                     <input type="range" min="10" max="200" step="5" value="130" id="range-slider-2" oninput="slideTwo()">
+                  </div>
+                  <div class="range-slider__value">
+                    <span id="range-slider-value-1">0</span>
+                    <span id="range-slider-value-2">0</span>
                   </div>
                 </div>
               </div>

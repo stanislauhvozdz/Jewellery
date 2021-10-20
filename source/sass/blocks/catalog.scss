@@ -14,7 +14,7 @@
 .catalog__filter {
   @media (max-width: $desktop) {
     position: absolute;
-    width: 100%;
+    width: calc(100% - 45px);
     height: 100%;
     left: -100%;
     top: 0;
@@ -62,8 +62,6 @@
   }
 }
 
-// .product__image {
-// }
 .catalog__pagination {
   border-top: 1px solid $color-accent-second;
   padding-top: 40px;

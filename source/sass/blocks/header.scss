@@ -8,19 +8,23 @@
   }
 }
 
-.header__top-open {
-  background-color: $color-accent;
+.header__top {
+  @media (max-width: $desktop) {
+    &.header__top-open {
+      background-color: $color-accent;
 
-  .header__link-icon {
-    stroke: $color-white;
-  }
+      .header__link-icon {
+        stroke: $color-white;
+      }
 
-  .header__logo-icon {
-    stroke: $color-white;
-  }
+      .header__logo-icon {
+        stroke: $color-white;
+      }
 
-  .menu-toggle__icon {
-    stroke: $color-mask;
+      .menu-toggle__icon {
+        stroke: $color-mask;
+      }
+    }
   }
 }
 
@@ -85,17 +89,18 @@
     background-color: $color-accent;
     border: none;
     padding: 10px 13px;
-
     height: 0;
     opacity: 0;
     visibility: hidden;
     position: absolute;
+
+    &.header__bottom-open {
+      height: 100vh;
+      opacity: 1;
+      visibility: visible;
+      position: static;
+    }
   }
 }
 
-.header__bottom-open {
-  height: 100vh;
-  opacity: 1;
-  visibility: visible;
-  position: static;
-}
+
