@@ -1,0 +1,113 @@
+.form-login {
+  max-width: 442px;
+  background-color: $color-accent-second;
+  position: relative;
+}
+
+.form-login__close {
+  cursor: pointer;
+  position: absolute;
+  right: 14px;
+  top: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.form-login__image {
+  height: 138px;
+  background-image: url(../img/login-bg@2x.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.form-login__content {
+  padding: 50px 50px 40px;
+}
+
+.form-login__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $ff-second;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+  color: $color-text-first;
+}
+
+.form-login label {
+  width: 100%;
+  display: inline-block;
+
+  &:not(:last-of-type) {
+    margin-bottom: 22px;
+  }
+}
+
+.form-login input {
+  width: 100%;
+  background: transparent;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid $color-text-first;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-text-second;
+  }
+}
+
+.form-login__forgot-link {
+  text-align: right;
+  display: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: $color-text-second;
+  padding: 7px 0;
+  margin-bottom: 35px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.form-login__button {
+  border: none;
+  padding: 25px;
+  width: 100%;
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-accent;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.form-login__description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: $color-text-second;
+}
+
+.form-login__sing-up {
+  color: $color-text-first;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $color-accent;
+  }
+}

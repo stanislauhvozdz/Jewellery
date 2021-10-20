@@ -1,0 +1,48 @@
+.faq {
+  margin-bottom: 110px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 77px;
+  }
+}
+
+// .faq__container {
+//   @media (max-width: $tablet) {
+//     padding: 0 45px;
+//   }
+// }
+
+.faq__heading {
+  letter-spacing: 0.03em;
+  margin-bottom: 48px;
+}
+
+.faq__list {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+
+.faq__item {
+  padding: 44px 50px 41px 42px;
+  border: 1px solid $color-accent;
+  margin-bottom: -1px;
+
+  @media (max-width: $desktop) {
+    padding: 42px 50px 43px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 20px 23px;
+  }
+}
+
+.faq__list-header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  line-height: 130%;
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import "variables.scss";
+@import "global.scss";
+
+// Big blocks
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/navigation.scss";
+@import "blocks/hero.scss";
+@import "blocks/slider.scss";
+@import "blocks/blog.scss";
+@import "blocks/faq.scss";
+@import "blocks/instagram.scss";
+@import "blocks/footer.scss";
+@import "blocks/catalog.scss";
+
+
+
+// Small blocks
+@import "blocks/search.scss";
+@import "blocks/product.scss";
+@import "blocks/swiper.scss";
+@import "blocks/article.scss";
+@import "blocks/accordion.scss";
+@import "blocks/menu-toggle.scss";
+@import "blocks/form-login.scss";
+@import "blocks/popup.scss";
+@import "blocks/form-filter.scss";
+@import "blocks/range-slider.scss";

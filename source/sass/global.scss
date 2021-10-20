@@ -1,0 +1,109 @@
+body {
+  font-family: $ff-first;
+  font-size: 16px;
+  color: $color-text-first;
+  font-weight: 500;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: $desktop) {
+    padding: 0 45px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 15px;
+  }
+}
+
+.heading {
+  font-family: $ff-second;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.heading-link {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 60px;
+
+  a {
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: inherit;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: $color-accent;
+    }
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+// @media (max-width: $desktop) {
+// }
+
+._active {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+._no-scroll {
+  overflow: hidden;
+}

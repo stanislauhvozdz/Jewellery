@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jawellery -- catalog</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="page__header header">
+    <h1 class="visually-hidden">SHOP</h1>
+    <div class="header__top">
+
+      <div class="container header__container">
+
+        <button class="menu-toggle">
+          <svg class="menu-toggle__icon" width="25" height="16">
+            <use xlink:href="img/sprite.svg#burger"></use>
+          </svg>
+        </button>
+
+        <div class="header__search search">
+          <label class="search__label">
+            <input type="search" placeholder="Type here to search">
+            <svg class="search__icon" width="14" height="14">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </label>
+        </div>
+        <div class="header__logo">
+          <a class="header__logo-link" href="index.html">
+            <svg class="header__logo-icon" width="66" height="66">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__login-and-cart">
+          <a class="header__link" href="login.html">Login</a>
+          <a class="header__link" href="#">
+            <svg class="header__link-icon" width="18" height="16">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+            Cart <span>0</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <nav class="navigation container">
+        <ul class="navigation__list">
+          <li class="navigation__item _hidden">
+            <div class="search search--tablet">
+              <label class="search__label">
+                <input type="search" placeholder="Type here to search">
+                <svg class="search__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </label>
+            </div>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link navigation__link--tablet">What’s new</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link navigation__link--tablet">Chokers</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link navigation__link--tablet">Necklaces</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link navigation__link--tablet">Rings</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link navigation__link--tablet">Earrings</a>
+          </li>
+          <li class="navigation__item _hidden">
+            <a href="#" class="navigation__link">About CH</a>
+          </li>
+          <li class="navigation__item _hidden">
+            <a href="#" class="navigation__link">Stores & Hours</a>
+          </li>
+          <li class="navigation__item _hidden">
+            <a href="#" class="navigation__link">Contact Us</a>
+          </li>
+          <li class="navigation__item _hidden">
+            <a class="navigation__link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+  </header>
+
+  <main class="page__main main">
+    <section class="hero hero--catalog">
+      <div class="hero__image">
+        <picture>
+          <!-- 1x: 1366px; 2x: 2732px -->
+          <source srcset="img/catalog-bg.webp 1x, img/catalog-bg@2x.webp 2x" type="image/webp">
+          <img class="img" src="img/catalog-bg.jpg" srcset="img/catalog-bg@2x.jpg 2x" alt="Различные украшения">
+        </picture>
+      </div>
+      <div class="hero__text">
+        <h2>ALL JEWELLERY</h2>
+        <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="container catalog__container">
+        <button class="catalog__filter-toggle">Filter</button>
+        <div class="catalog__filter">
+          <form class="form-filter accordion accordion--no-swipe" action="#">
+
+            <button class="form-filter__close" aria-label="close popup" id="form-close">
+              <svg class="form-login__close-icon" width="14" height="14">
+                <use xlink:href="img/sprite.svg#close"></use>
+              </svg>
+            </button>
+
+            <fieldset class="form-filter__category">
+              <legend>Product</legend>
+              <div class="accordion__item">
+                <header class="accordion__header">
+                  <h3 class="accordion__title">Product</h3>
+                  <button type="button">
+                    <svg class="accordion__arrow" width="16" height="8">
+                      <use xlink:href="img/sprite.svg#arrow-top"></use>
+                    </svg>
+                  </button>
+                </header>
+                <div class="accordion__content form-filter__content">
+                  <label>
+                    <input type="checkbox" name="product" value="necklaces" id="1">
+                    <span>Necklaces</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="product" value="chokers">
+                    <span>Chokers</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="product" value="rings">
+                    <span>Rings</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="product" value="earrings">
+                    <span>Earrings</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-filter__category">
+              <legend>Material</legend>
+              <div class="accordion__item">
+                <header class="accordion__header">
+                  <h3 class="accordion__title">Material</h3>
+                  <button type="button">
+                    <svg class="accordion__arrow" width="16" height="8">
+                      <use xlink:href="img/sprite.svg#arrow-top"></use>
+                    </svg>
+                  </button>
+                </header>
+                <div class="accordion__content form-filter__content">
+                  <label>
+                    <input type="checkbox" name="material" value="gold">
+                    <span>Gold</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="material" value="silver">
+                    <span>Silver</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Collection</legend>
+              <div class="accordion__item">
+                <header class="accordion__header">
+                  <h3 class="accordion__title">Collection</h3>
+                  <button type="button">
+                    <svg class="accordion__arrow" width="16" height="8">
+                      <use xlink:href="img/sprite.svg#arrow-top"></use>
+                    </svg>
+                  </button>
+                </header>
+                <div class="accordion__content form-filter__content">
+                  <label>
+                    <input type="checkbox" name="material" value="pink flamingo">
+                    <span>Pink flamingo</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="material" value="dreams">
+                    <span>Dreams</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Price</legend>
+              <div class="accordion__item">
+                <header class="accordion__header">
+                  <h3 class="accordion__title">Price</h3>
+                  <button type="button">
+                    <svg class="accordion__arrow" width="16" height="8">
+                      <use xlink:href="img/sprite.svg#arrow-top"></use>
+                    </svg>
+                  </button>
+                </header>
+                <div class="accordion__content form-filter__content range-slider">
+                  <div class="value">
+                    <span class="range-slider__value" id="range-slider-value-1">0</span>
+                    <span class="range-slider__value" id="range-slider-value-2">0</span>
+                  </div>
+                  <div class="range-slider__body">
+                    <div class="range-slider__track"></div>
+                    <input type="range" min="10" max="200" step="5" value="30" id="range-slider-1" oninput="slideOne()">
+                    <input type="range" min="10" max="200" step="5" value="130" id="range-slider-2" oninput="slideTwo()">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <button class="form-filter__submit" type="submit">Apply</button>
+            <button class="form-filter__reset" type="reset">Clear All</button>
+          </form>
+        </div>
+        <div class="catalog__products">
+          <article class="product">
+            <div class="product__image">
+              <img src="img/catalog/1.jpg" alt="double pearl earrings">
+              <h3>Double pearl earrings</h3>
+              <p>$ 115</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/2.jpg" alt="black choker gold bead">
+              <h3>Black choker gold bead</h3>
+              <p>$ 55</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/3.jpg" alt="gold layered necklace">
+              <h3>Gold layered necklace</h3>
+              <p>$ 155</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/4.jpg" alt="blue gemstone pendant">
+              <h3>Blue gemstone pendant</h3>
+              <p>$ 105</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/5.jpg" alt="boho earrings">
+              <h3>Boho earrings</h3>
+              <p>$ 75</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/6.jpg" alt="bird necklace">
+              <h3>Bird necklace</h3>
+              <p>$ 135</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/7.jpg" alt="black leather choker necklace">
+              <h3>Black leather choker</h3>
+              <p>$ 85</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/8.jpg" alt="purple gemstone necklace">
+              <h3>Purple gemstone necklace</h3>
+              <p>$ 145</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/9.jpg" alt="elephant earrings">
+              <h3>Elephant earrings</h3>
+              <p>$ 95</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/10.jpg" alt="threader necklace closeup">
+              <h3>Threader necklace closeup</h3>
+              <p>$ 115</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/11.jpg" alt="origami crane necklace">
+              <h3>Origami crane necklace</h3>
+              <p>$ 105</p>
+            </div>
+          </article>
+          <article class="product ">
+            <div class="product__image">
+              <img src="img/catalog/12.jpg" alt="marble earrings">
+              <h3>Marble earrings</h3>
+              <p>$ 95</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="catalog__pagination">
+        <div class="container catalog__pagination-container">
+          <button class="catalog__button-prev">Previous</button>
+          <ul class="catalog__pagination-list">
+            <li class="catalog__pagination-item"><a href="#" class="catalog__pagination-link catalog__pagination-link--active">1</a></li>
+            <li class="catalog__pagination-item"><a href="#" class="catalog__pagination-link">2</a></li>
+            <li class="catalog__pagination-item"><a href="#" class="catalog__pagination-link">3</a></li>
+            <li class="catalog__pagination-item"><a href="#" class="catalog__pagination-link">4</a></li>
+            <li class="catalog__pagination-item"><a href="#" class="catalog__pagination-link">5</a></li>
+          </ul>
+          <button class="catalog__button-next">Next</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="page__footer footer">
+    <div class="container footer__container">
+      <div class="footer__registration">
+        <h2 class="footer__registration-title heading">The good stuff in your inbox </h2>
+        <p class="footer__registration-description">News and updates from CH. No spam, we promise.</p>
+        <form class="footer__registration-form" action="#">
+          <input type="email" placeholder="Your E-mail">
+          <button class="footer__registration-button" type="submit">Sign Up
+            <svg class="footer__registration-icon" width="40" height="15">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <nav class="navigation navigation--footer">
+        <ul class="navigation__list navigation__list--footer">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Ordering & Payment</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">About CH</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Terms & Conditions</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Stores & Hours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Returns & Exchanges</a>
+
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Jobs</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Delivery</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
+              Facebook
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#instagram"></use>
+              </svg>
+              Instagram
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#pinterest"></use>
+              </svg>
+              Pinterest
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <section class="popup">
+    <div class="popup__overlay">
+      <div class="popup__content">
+        <form class="form-login" action="#">
+          <button class="form-login__close" aria-label="close popup" id="popup-close">
+            <svg class="form-login__close-icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="form-login__image"></div>
+          <div class="form-login__content">
+            <h2 class="form-login__title">Log In</h2>
+            <label aria-label="Write email">
+              <input type="email" placeholder="Your E-mail" required="">
+            </label>
+            <label aria-label="Write password">
+              <input type="password" placeholder="Password" required="">
+            </label>
+            <a class="form-login__forgot-link" href="#">Forgot your password?</a>
+            <button class="form-login__button">Log In</button>
+            <p class="form-login__description">Don’t have an account? <a class="form-login__sing-up" href="#">Sign
+                up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

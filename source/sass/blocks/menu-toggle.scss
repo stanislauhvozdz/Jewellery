@@ -1,0 +1,14 @@
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  stroke: $color-text-first;
+  padding: 16px;
+  width: fit-content;
+
+  @media (max-width: $tablet) {
+    display: block;
+  }
+}

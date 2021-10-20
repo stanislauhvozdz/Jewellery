@@ -1,0 +1,132 @@
+// .catalog {
+// }
+.catalog__container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 50px;
+  position: relative;
+
+  @media (max-width: $desktop) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog__filter {
+  @media (max-width: $desktop) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    opacity: 0;
+    background-color: $color-white;
+  }
+
+  &.active {
+    left: 45px;
+    opacity: 1;
+
+    @media (max-width: $tablet) {
+      left: 15px;
+    }
+  }
+}
+
+.catalog__filter-toggle {
+  display: none;
+
+  @media (max-width: $desktop) {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 25px 35px;
+    border: none;
+    color: $color-white;
+    background-color: $color-accent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.catalog__products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+  padding-bottom: 40px;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr );
+  }
+}
+
+// .product__image {
+// }
+.catalog__pagination {
+  border-top: 1px solid $color-accent-second;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.catalog__pagination-container {
+  padding-left: 315px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $desktop) {
+    padding-left: 45px;
+  }
+
+  @media (max-width: $desktop) {
+    padding-left: 15px;
+    justify-content: center;
+  }
+}
+
+.catalog__button-prev,
+.catalog__button-next {
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+  cursor: pointer;
+  flex-basis: 20%;
+  text-align: left;
+
+  &:hover {
+    color: $color-accent;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.catalog__button-next {
+  text-align: right;
+}
+
+.catalog__pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// .catalog__pagination-item {
+// }
+.catalog__pagination-link {
+  text-decoration: none;
+  padding: 7px;
+  color: $color-text-second;
+}
+.catalog__pagination-link--active {
+  color: $color-text-first;
+}
+// .catalog__button-next {
+// }

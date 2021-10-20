@@ -1,0 +1,15 @@
+.page__body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page__main {
+  flex-grow: 1;
+}
+
+.page__body-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
