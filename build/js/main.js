@@ -6,17 +6,17 @@ try {
 
 // Swiper
 try {
-  let swiper = new Swiper(".mySwiper", {
+  let swiper = new Swiper('.mySwiper', {
     slidesPerView: 2,
     slidesPerGroup: 2,
     spaceBetween: 30,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination',
       clickable: true,
       renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + "</span>";
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
       },
     },
     breakpoints: {
@@ -26,8 +26,8 @@ try {
       },
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
 } catch {};
@@ -125,8 +125,8 @@ try {
     if (!inputEmail.value || !inputPassword.value) {
       evt.preventDefault();
     } else {
-      localStorage.setItem("login", inputEmail.value);
-      localStorage.setItem("password", inputPassword.value);
+      localStorage.setItem('login', inputEmail.value);
+      localStorage.setItem('password', inputPassword.value);
     }
   })
 } catch {};
@@ -162,41 +162,45 @@ try {
 
 // Range slider
 try {
-  window.onload = function () {
-    slideOne();
-    slideTwo();
-  }
 
-  let sliderOne = document.getElementById('range-slider-1');
-  let sliderTwo = document.getElementById('range-slider-2');
-  let displayValOne = document.getElementById('range-slider-value-1');
-  let displayValTwo = document.getElementById('range-slider-value-2');
-  let minGap = 10;
-  let sliderTrack = document.querySelector('.range-slider__track');
-  let sliderMaxValue = document.getElementById('range-slider-1').max;
+  if (document.querySelector('.range-slider')) {
 
-  function slideOne() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-      sliderOne.value = parseInt(sliderTwo.value) - minGap;
+    window.onload = function () {
+      slideOne();
+      slideTwo();
     }
-    displayValOne.textContent = sliderOne.value + ' $';
-    displayValOne.style.left = (sliderOne.value / 2) + '%';
-    fillColor();
-  }
 
-  function slideTwo() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-      sliderTwo.value = parseInt(sliderOne.value) + minGap;
+    let sliderOne = document.getElementById('range-slider-1');
+    let sliderTwo = document.getElementById('range-slider-2');
+    let displayValOne = document.getElementById('range-slider-value-1');
+    let displayValTwo = document.getElementById('range-slider-value-2');
+    let minGap = 10;
+    let sliderTrack = document.querySelector('.range-slider__track');
+    let sliderMaxValue = document.getElementById('range-slider-1').max;
+
+    function slideOne() {
+      if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+      }
+      displayValOne.textContent = sliderOne.value + ' $';
+      displayValOne.style.left = (sliderOne.value / 2) + '%';
+      fillColor();
     }
-    displayValTwo.textContent = sliderTwo.value + ' $';
-    displayValTwo.style.left = (sliderTwo.value / 2) + '%';
 
-    fillColor();
-  }
+    function slideTwo() {
+      if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+        sliderTwo.value = parseInt(sliderOne.value) + minGap;
+      }
+      displayValTwo.textContent = sliderTwo.value + ' $';
+      displayValTwo.style.left = (sliderTwo.value / 2) + '%';
 
-  function fillColor() {
-    percent1 = (sliderOne.value / sliderMaxValue) * 100;
-    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #A87B62 ${percent1}% , #A87B62 ${percent2}%, #dadae5 ${percent2}%)`;
+      fillColor();
+    }
+
+    function fillColor() {
+      percent1 = (sliderOne.value / sliderMaxValue) * 100;
+      percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+      sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #A87B62 ${percent1}% , #A87B62 ${percent2}%, #dadae5 ${percent2}%)`;
+    }
   }
 } catch {}

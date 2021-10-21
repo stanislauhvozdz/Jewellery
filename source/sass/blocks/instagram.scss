@@ -30,7 +30,6 @@
   margin-bottom: 65px;
 }
 
-
 .instagram__gallery {
   display: grid;
   grid-template-columns: 1fr 1.73fr 1fr 1fr;
@@ -42,7 +41,6 @@
 }
 
 .instagram__gallery-column {
-  // display: grid;
   display: flex;
   flex-direction: column;
   row-gap: 34px;

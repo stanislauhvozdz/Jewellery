@@ -11,7 +11,8 @@
   }
 }
 
-.product h3 {
+.product a {
+  text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -19,6 +20,7 @@
   color: $color-text-first;
   margin: 20px 0 7px;
   padding: 0;
+  display: inherit;
 }
 
 .product p {

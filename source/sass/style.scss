@@ -1,6 +1,10 @@
 @import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import "fonts.scss";
 @import "variables.scss";
 @import "global.scss";
+
+@import "assets/swiper.scss";
+
 
 // Big blocks
 @import "blocks/page.scss";
@@ -19,7 +23,7 @@
 // Small blocks
 @import "blocks/search.scss";
 @import "blocks/product.scss";
-@import "blocks/swiper.scss";
+@import "blocks/swiper-custom.scss";
 @import "blocks/article.scss";
 @import "blocks/accordion.scss";
 @import "blocks/menu-toggle.scss";

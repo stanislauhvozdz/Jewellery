@@ -13,7 +13,6 @@
   grid-template-columns: minmax(min-content, 500px)  1fr max-content;
 
   @media (max-width: 1040px) {
-    // grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     padding: 0 45px;
     padding-right: 140px;

@@ -4,7 +4,7 @@
   grid-template-columns: 1fr 1fr;
   grid-column: 2 span;
 
-  @media (min-width: 992px) {
+  @media (min-width: $desktop) {
     &--large {
       grid-column: 2 span;
       grid-row: 2 span;
@@ -29,23 +29,23 @@
     & .article__content {
       order: -1;
 
-      @media (max-width: 767px) {
+      @media (max-width: $tablet) {
         order: 1;
       }
     }
   }
 
-  &:nth-child(2) {
-    @media (max-width: 992px) {
+  &:nth-child(3n + 2) {
+    @media (max-width: $desktop) {
       order: 3;
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: $desktop) {
     height: 300px;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet) {
     grid-template-columns: 1fr;
     height: 512px;
   }
