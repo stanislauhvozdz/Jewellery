@@ -7,6 +7,10 @@
   @media (max-width: $desktop) {
     grid-template-columns: 1fr;
   }
+
+  @media (max-width: $tablet) {
+    gap: 40px;
+  }
 }
 
 .catalog__filter {
@@ -20,9 +24,20 @@
     background-color: $color-white;
   }
 
+  @media (max-width: $tablet) {
+    position: absolute;
+    width: calc(100% - 15px);
+    height: 100%;
+    left: -100%;
+    top: 0;
+    opacity: 0;
+    background-color: $color-white;
+  }
+
   &.active {
     left: 45px;
     opacity: 1;
+    z-index: 1;
 
     @media (max-width: $tablet) {
       left: 15px;
@@ -57,6 +72,8 @@
 
   @media (max-width: $tablet) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    row-gap: 24px;
   }
 }
 
@@ -64,6 +81,12 @@
   border-top: 1px solid $color-accent-second;
   padding-top: 40px;
   padding-bottom: 80px;
+
+  @media (max-width: $tablet) {
+    border: none;
+    padding-top: 2px;
+    padding-bottom: 66px;
+  }
 }
 
 .catalog__pagination-container {
@@ -121,6 +144,10 @@
   text-decoration: none;
   padding: 7px;
   color: $color-text-second;
+
+  @media (max-width: $tablet) {
+    padding: 7px 12px;
+  }
 }
 
 .catalog__pagination-link--active {

@@ -21,7 +21,7 @@
   gap: 35px;
   padding: 0 18px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $tablet) {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
@@ -38,11 +38,15 @@
       column-gap: 87px;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: $tablet) {
       grid-template-columns: 1fr;
       margin-bottom: 50px;
       height: auto;
       opacity: 1;
+
+      & .navigation__item:nth-child(4) {
+        margin-bottom: 30px;
+      }
     }
   }
 }

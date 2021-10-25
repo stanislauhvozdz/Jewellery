@@ -48,6 +48,10 @@
   text-align: left;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 17px;
+  }
 }
 
 .footer__registration-description {
