@@ -10,6 +10,10 @@
   @media (max-width: $desktop) {
     padding: 0 45px;
   }
+
+  @media (max-width: $tablet) {
+    padding: 0 15px;
+  }
 }
 
 .instagram__heading {
@@ -35,8 +39,14 @@
   grid-template-columns: 1fr 1.73fr 1fr 1fr;
   gap: 27px;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     gap: 15px;
+  }
+
+  @media (max-width: $tablet) {
+    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
   }
 }
 
@@ -47,5 +57,9 @@
 
   @media (max-width: $tablet) {
     row-gap: 20px;
+
+    & ._hidden {
+      display: none;
+    }
   }
 }

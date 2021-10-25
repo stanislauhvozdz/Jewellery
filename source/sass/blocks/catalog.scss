@@ -93,6 +93,7 @@
   cursor: pointer;
   flex-basis: 20%;
   text-align: left;
+  color: inherit;
 
   &:hover {
     color: $color-accent;
