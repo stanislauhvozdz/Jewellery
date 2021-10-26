@@ -4,7 +4,7 @@
   padding: 30px 15px 14px;
 
   @media (max-width: $desktop) {
-    padding: 30px 30px 26px;
+    padding: 30px 45px 26px;
   }
 
   @media (max-width: $tablet) {
@@ -33,7 +33,7 @@
 }
 
 .header__search {
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     display: none;
   }
 }
@@ -55,10 +55,10 @@
   justify-self: flex-end;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 13px;
+  margin-top: 5px;
 
-  @media (max-width: $tablet) {
-    margin-top: 6px;
+  @media (max-width: $desktop) {
+    margin-top: 20px;
   }
 }
 
@@ -74,20 +74,26 @@
   }
 
   &:not(:last-child) {
-    margin-right: 32px;
+    margin-right: 37px;
   }
 
   &:hover {
     color: $color-accent;
   }
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     font-size: 0;
 
     & .header__link-icon {
       width: 18px;
       height: 18px;
-      transform: translate(14px, -6px);
+      transform: translate(0, -6px);
+    }
+  }
+
+  @media (max-width: $tablet) {
+    & .header__link-icon {
+      transform: translate(0, -12px);
     }
   }
 }
@@ -96,7 +102,7 @@
   display: none;
   stroke: $color-black;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     fill: transparent;
     display: block;
   }
@@ -106,7 +112,11 @@
   border-top: 1px solid #f6f5f4;
   padding: 21px 0;
 
-  @media (max-width: $tablet) {
+  & .navigation {
+    transform: translate(5px, 1px);
+  }
+
+  @media (max-width: $desktop) {
     background-color: $color-accent;
     border: none;
     padding: 10px 13px;
