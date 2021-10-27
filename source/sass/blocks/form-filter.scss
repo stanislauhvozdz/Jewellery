@@ -7,7 +7,15 @@
   }
 
   @media (max-width: $tablet) {
-    max-width: 85%;
+    width: 423px;
+  }
+
+  @media (max-width: 500px) {
+    width: 350px;
+  }
+
+  @media (max-width: 400px) {
+    width: 270px;
   }
 }
 
@@ -37,18 +45,32 @@
   border: 1px solid $color-accent;
   margin-top: -1px;
   padding: 23px 25px 20px;
+  position: relative;
+
+  & .accordion__item {
+    position: static;
+  }
 
   &:last-of-type {
     margin-bottom: 35px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 25px;
+    }
   }
 
   @media (max-width: $desktop) {
     border-right: none;
     border-left: none;
+    padding: 35px 22px 30px;
 
     &:first-of-type {
       border-top: none;
     }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 22px 15px 22px 20px;
   }
 }
 
@@ -60,6 +82,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: $desktop) {
+    padding-right: 17px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-right: 0;
+  }
 }
 
 .form-filter h3 {
@@ -67,10 +97,14 @@
   font-weight: 500;
   margin: 0;
   padding: 0;
+
+  @media (max-width: $desktop) {
+    font-size: 18px;
+  }
 }
 
-
 .form-filter label {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -87,10 +121,27 @@
     width: 15px;
     height: 15px;
     border: 1px solid $color-accent;
+
+    @media (max-width: $desktop) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &:first-of-type {
     margin-top: 17px;
+  }
+
+  @media (max-width: $desktop) {
+    padding: 10px 0;
+  }
+}
+
+.form-filter label span {
+  font-size: 14px;
+
+  @media (max-width: $desktop) {
+    font-size: 16px;
   }
 }
 
@@ -105,10 +156,16 @@
   &:checked {
     background-color: $color-accent;
   }
+
+  @media (max-width: $desktop) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form-filter__submit,
 .form-filter__reset {
+  cursor: pointer;
   width: 100%;
   padding: 25px;
   margin-bottom: 25px;
@@ -116,14 +173,16 @@
   background-color: transparent;
 
   @media (max-width: $desktop) {
-    width: calc(100% - 80px);
+    width: calc(100% - 60px);
     position: relative;
-    left: 50%;
+    left: 48%;
     transform: translateX(-50%);
   }
 
-  @media (max-width: $desktop) {
-    width: calc(100% - 30px);
+  @media (max-width: $tablet) {
+    width: calc(100% - 50px);
+    left: 50%;
+    margin-bottom: 20px;
   }
 }
 

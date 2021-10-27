@@ -173,9 +173,13 @@
   @media (max-width: 767px) {
     font-size: 0;
 
-    svg {
+    .footer__social-icon {
       width: 20px;
       height: 20px;
+
+      &.facebook {
+        width: 12px;
+      }
     }
   }
 
@@ -191,4 +195,8 @@
 .footer__social-icon {
   fill: $color-white;
   margin-right: 12px;
+
+  @media (max-width: $tablet) {
+    margin-right: 30px;
+  }
 }

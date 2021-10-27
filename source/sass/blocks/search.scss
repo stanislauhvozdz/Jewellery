@@ -1,6 +1,6 @@
 .search {
   input {
-    padding: 14px 0 12px 30px;
+    padding: 14px 0 12px 50px;
     border: none;
     border-bottom: 1px solid transparent;
     transition: all 0.3s ease-in-out;
@@ -52,5 +52,9 @@
     &::placeholder {
       font-size: 0;
     }
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 15px;
   }
 }

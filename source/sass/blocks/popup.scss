@@ -18,6 +18,10 @@
   margin: 0 auto;
 }
 
+.popup__content {
+  padding: 0 25px;
+}
+
 .popup--active {
   position: fixed;
   display: block;

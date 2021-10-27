@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Gold, silver">
-  <title>Jawellery</title>
+  <meta name="description" content="Gold, silverб jewelry store">
+  <title>Jawellery - jewelry store</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font">
   <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font">
@@ -18,7 +18,7 @@
 
 <body class="page__body">
   <header class="page__header header">
-    <h1 class="visually-hidden">SHOP</h1>
+    <h1 class="visually-hidden">jewelry store </h1>
     <div class="header__top header__top-open">
 
       <div class="container header__container">
@@ -57,7 +57,7 @@
       </div>
     </div>
     <div class="header__bottom header__bottom-open">
-      <nav class="navigation container">
+      <nav class="navigation container navigation__container">
         <ul class="navigation__list">
           <li class="navigation__item _hidden">
             <form class="search search--tablet" action="#">
@@ -471,7 +471,7 @@
         <h2 class="footer__registration-title heading">The good stuff in your inbox </h2>
         <p class="footer__registration-description">News and updates from CH. No spam, we promise.</p>
         <form class="footer__registration-form" action="#">
-          <input type="email" placeholder="Your E-mail">
+          <input type="email" placeholder="Your E-mail" required="">
           <button class="footer__registration-button" type="submit">Sign Up
             <svg class="footer__registration-icon" width="30" height="15">
               <use xlink:href="img/sprite.svg#arrow-left"></use>
@@ -512,7 +512,7 @@
         <ul class="footer__social-list">
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
-              <svg class="footer__social-icon" width="15" height="15">
+              <svg class="footer__social-icon facebook" width="15" height="15">
                 <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
               Facebook
@@ -551,11 +551,11 @@
     <div class="popup__overlay">
       <div class="popup__content">
         <form class="form-login" action="#">
-          <button class="form-login__close" aria-label="close popup" id="popup-close" type="button" tabindex="6" onfocus="this.tabIndex=1;" onblur="this.tabIndex=7;">
+          <a href="index.html" class="form-login__close" aria-label="close popup" id="popup-close" type="button" tabindex="6" onfocus="this.tabIndex=1;" onblur="this.tabIndex=7;">
             <svg class="form-login__close-icon" width="20" height="20">
               <use xlink:href="img/sprite.svg#close"></use>
             </svg>
-          </button>
+          </a>
           <div class="form-login__content">
             <h2 class="form-login__title">Log In</h2>
             <label aria-label="Write email">

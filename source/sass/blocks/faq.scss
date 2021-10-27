@@ -1,14 +1,26 @@
 .faq {
   margin-bottom: 110px;
 
+  @media (max-width: $desktop) {
+    margin-bottom: 70px;
+  }
+
   @media (max-width: $tablet) {
-    margin-bottom: 77px;
+    margin-bottom: 55px;
   }
 }
 
 .faq__heading {
   letter-spacing: 0.03em;
   margin-bottom: 45px;
+
+  @media (max-width: $desktop) {
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 28px;
+  }
 }
 
 .faq__list {
@@ -22,11 +34,11 @@
   margin-bottom: -1px;
 
   @media (max-width: $desktop) {
-    padding: 42px 50px 43px;
+    padding: 42px 50px 45px;
   }
 
-  @media (max-width: 767px) {
-    padding: 20px 23px;
+  @media (max-width: $tablet) {
+    padding: 15px 23px 20px;
   }
 }
 
@@ -38,4 +50,16 @@
   font-size: 18px;
   line-height: 130%;
   cursor: pointer;
+}
+
+.faq__item-description {
+  @media (max-width: $desktop) {
+    margin: 28px 0 0;
+    padding-left: 0;
+  }
+
+  @media (max-width: $tablet) {
+    padding-left: 0;
+    margin-top: 13px;
+  }
 }

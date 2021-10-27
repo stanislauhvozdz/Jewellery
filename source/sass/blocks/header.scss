@@ -68,6 +68,7 @@
   font-size: 14px;
   transition: all 0.3s ease-in-out;
   padding: 10px 0;
+  height: fit-content;
 
   span {
     margin-left: 2px;
@@ -114,6 +115,10 @@
 
   & .navigation {
     transform: translate(5px, 1px);
+
+    @media (max-width: $desktop) {
+      transform: none;
+    }
   }
 
   @media (max-width: $desktop) {
@@ -133,11 +138,19 @@
     }
 
     & .navigation__item:nth-child(6) {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+
+      @media (max-width: $tablet) {
+        margin-bottom: 11px;
+      }
     }
 
     & .navigation__item:last-child {
-      margin-top: 30px;
+      margin-top: 33px;
+
+      @media (max-width: $tablet) {
+        margin-top: 20px;
+      }
     }
 
     & .navigation__item:nth-last-child(1) a,
@@ -145,6 +158,11 @@
     & .navigation__item:nth-last-child(3) a,
     & .navigation__item:nth-last-child(4) a {
       color: rgba($color-white, 0.7);
+      font-size: 18px;
+    }
+
+    & .navigation__item:nth-last-child(2) {
+      transform: translateY(5px);
     }
   }
 }

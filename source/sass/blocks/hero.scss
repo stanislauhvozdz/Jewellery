@@ -5,8 +5,12 @@
   overflow: hidden;
   margin-bottom: 80px;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     margin-bottom: 30px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 22px;
   }
 
   &::before {
@@ -25,15 +29,20 @@
 
     @media (max-width: $desktop) {
       margin-bottom: 50px;
+
+      .hero__text {
+        min-width: 500px;
+      }
     }
 
     @media (max-width: $tablet) {
       margin-bottom: 42px;
+
+      .hero__text {
+        min-width: auto;
+      }
     }
 
-    .hero__text {
-      min-width: 295px;
-    }
 
     .hero__text h2 {
       font-size: 34px;
@@ -80,6 +89,10 @@
   line-height: 130%;
   letter-spacing: 0.03em;
   margin: 0 0 -6px;
+
+  @media (max-width: $tablet) {
+    font-size: 38px;
+  }
 }
 
 .hero__text p {
@@ -90,4 +103,8 @@
   line-height: 130%;
   text-align: center;
   margin: 0;
+
+  @media (max-width: $tablet) {
+    font-size: 34px;
+  }
 }

@@ -16,8 +16,8 @@
 .catalog__filter {
   @media (max-width: $desktop) {
     position: absolute;
-    width: calc(100% - 45px);
-    height: 100%;
+    width: 423px;
+    height: auto;
     left: -100%;
     top: 0;
     opacity: 0;
@@ -26,21 +26,33 @@
 
   @media (max-width: $tablet) {
     position: absolute;
-    width: calc(100% - 15px);
-    height: 100%;
+    width: 423px;
+    height: auto;
     left: -100%;
     top: 0;
     opacity: 0;
     background-color: $color-white;
   }
 
+  @media (max-width: 500px) {
+    width: 350px;
+  }
+
+  @media (max-width: 400px) {
+    width: 270px;
+  }
+
   &.active {
-    left: 45px;
+    left: 0;
     opacity: 1;
     z-index: 1;
 
     @media (max-width: $tablet) {
       left: 15px;
+    }
+
+    @media (max-width: 400px) {
+      left: 25px;
     }
   }
 }

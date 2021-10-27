@@ -15,16 +15,41 @@ try {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
-      },
+      // type: "fraction",
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+          return current + ' of ' + (total - 1);
+      }
+
+
+      // renderBullet: function (index, className) {
+      //   return '<span class="' + className + '">' + (index + 1) + '</span>';
+      // },
     },
+
     breakpoints: {
-      769: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        pagination: {
+          type: "bullets",
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+        },
+      },
+      1024: {
         slidesPerView: 4,
         slidesPerGroup: 4,
+        pagination: {
+          type: "bullets",
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+        },
       },
     },
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -68,11 +93,18 @@ try {
 try {
   let headerTop = document.querySelector('.header__top')
   let headerBottom = document.querySelector('.header__bottom')
+  let pageBody = document.querySelector('.page__body');
 
   let menuToggle = document.querySelector('.menu-toggle')
   menuToggle.addEventListener('click', () => {
     headerBottom.classList.toggle('header__bottom-open')
     headerTop.classList.toggle('header__top-open')
+
+    if (!pageBody.classList.contains('_no-scroll')) {
+      pageBody.classList.add('_no-scroll')
+    } else {
+      pageBody.classList.remove('_no-scroll')
+    }
   })
 } catch {};
 

@@ -5,13 +5,17 @@
   .product__image {
     height: 284px;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $desktop) {
       height: 340px;
     }
 
     @media (max-width: 600px) {
       height: 136px;
     }
+  }
+
+  @media (max-width: $desktop) {
+    margin-bottom: 67px;
   }
 
   @media (max-width: $tablet) {
@@ -32,13 +36,17 @@
 }
 
 .slider__heading {
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     margin-bottom: 20px;
   }
 }
 
 .slider__heading-link {
+  @media (max-width: $desktop) {
+    margin-bottom: 55px;
+  }
+
   @media (max-width: $tablet) {
-    margin-bottom: 53px;
+    margin-bottom: 44px;
   }
 }

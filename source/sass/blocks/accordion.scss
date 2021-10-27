@@ -1,3 +1,7 @@
+.accordion__item {
+  position: relative;
+}
+
 .accordion__header {
   margin: 0;
   display: flex;
@@ -6,6 +10,16 @@
   font-size: 18px;
   line-height: 130%;
   cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+  }
 
   button {
     background-color: transparent;
@@ -24,10 +38,19 @@
   margin: 0;
   font-weight: 500;
   font-size: 18px;
-  padding-right: 20px;
+  padding-right: 15px;
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+  }
 }
 
 .accordion__arrow {
+  @media (max-width: $desktop) {
+    width: 23px;
+    height: 12px;
+  }
+
   @media (max-width: $tablet) {
     width: 20px;
     height: 10px;
@@ -47,9 +70,15 @@
   max-width: 530px;
   line-height: 130%;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $desktop) {
     padding-left: 0;
     margin-top: 27px;
+    max-width: 545px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-left: 0;
+    margin-top: 13px;
     max-width: 545px;
   }
 }

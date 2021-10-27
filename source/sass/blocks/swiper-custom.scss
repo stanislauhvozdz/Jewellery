@@ -5,11 +5,11 @@
   position: static;
 
   @media (max-width: $desktop) {
-    padding-bottom: 140px;
+    padding-bottom: 62px;
   }
 
   @media (max-width: $tablet) {
-    padding-bottom: 75px;
+    padding-bottom: 32px;
   }
 }
 
@@ -45,6 +45,10 @@
 
   svg {
     transform: rotate(180deg);
+  }
+
+  @media (max-width: $desktop) {
+    right: 45px;
   }
 }
 

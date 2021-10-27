@@ -12,6 +12,16 @@
   border: none;
   background-color: transparent;
   z-index: 3;
+
+  @media (max-width: $tablet) {
+    top: 15px;
+    right: 9px;
+
+    & .form-login__close-icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
 }
 
 .form-login__content {
@@ -28,6 +38,20 @@
     background-image: url("../img/login-bg@2x.jpg");
     background-position: center;
     background-size: cover;
+
+    @media (max-width: $tablet) {
+      height: 84px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 190px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 122px;
   }
 }
 
@@ -40,6 +64,11 @@
   line-height: 130%;
   text-align: center;
   color: $color-text-first;
+
+  @media (max-width: $tablet) {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
 }
 
 .form-login label {
@@ -48,6 +77,10 @@
 
   &:not(:last-of-type) {
     margin-bottom: 22px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -67,7 +100,6 @@
 
 .form-login__forgot-link {
   text-align: right;
-  display: inherit;
   text-decoration: none;
   font-weight: 500;
   font-size: 12px;
@@ -76,9 +108,20 @@
   padding: 7px 0;
   margin-bottom: 35px;
   transition: all 0.3s ease-in-out;
+  display: inherit;
+  margin-left: auto;
+  width: fit-content;
 
   &:hover {
     color: $color-accent;
+  }
+
+  @media (min-width: $tablet) {
+    transform: translate(-2px, -3px);
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 25px;
   }
 }
 
@@ -94,6 +137,7 @@
   color: $color-white;
   background-color: $color-accent;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.5;

@@ -422,7 +422,7 @@
         <h2 class="footer__registration-title heading">The good stuff in your inbox </h2>
         <p class="footer__registration-description">News and updates from CH. No spam, we promise.</p>
         <form class="footer__registration-form" action="#">
-          <input type="email" placeholder="Your E-mail" name="email">
+          <input type="email" placeholder="Your E-mail" name="email" required="">
           <button class="footer__registration-button" type="submit">Sign Up
             <svg class="footer__registration-icon" width="30" height="15">
               <use xlink:href="img/sprite.svg#arrow-left"></use>
@@ -501,11 +501,11 @@
     <div class="popup__overlay">
       <div class="popup__content">
         <form class="form-login" action="#">
-          <button class="form-login__close" aria-label="close popup" id="popup-close" type="button">
+          <a href="index.html" class="form-login__close" aria-label="close popup" id="popup-close" type="button">
             <svg class="form-login__close-icon" width="20" height="20">
               <use xlink:href="img/sprite.svg#close"></use>
             </svg>
-          </button>
+          </a>
           <div class="form-login__content">
             <h2 class="form-login__title">Log In</h2>
             <label aria-label="Write email">
