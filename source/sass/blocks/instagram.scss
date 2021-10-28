@@ -2,7 +2,7 @@
   margin-bottom: 130px;
 
   @media (max-width: $desktop) {
-    margin-bottom: 83px;
+    margin-bottom: 80px;
   }
 
   @media (max-width: $tablet) {
@@ -38,12 +38,12 @@
   margin-bottom: 65px;
 
   @media (max-width: $desktop) {
-    margin-bottom: 52px;
+    margin-bottom: 67px;
   }
 
-  // @media (max-width: $tablet) {
-  //   margin-bottom: 48px;
-  // }
+  @media (max-width: $tablet) {
+    margin-bottom: 52px;
+  }
 }
 
 .instagram__gallery {

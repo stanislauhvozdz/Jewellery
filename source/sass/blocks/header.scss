@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   padding: 30px 15px 14px;
+  position: relative;
 
   @media (max-width: $desktop) {
     padding: 30px 45px 26px;
@@ -125,6 +126,9 @@
     background-color: $color-accent;
     border: none;
     padding: 10px 13px;
+    z-index: 10;
+    overflow: hidden;
+    overflow-y: scroll;
     height: 0;
     opacity: 0;
     visibility: hidden;
@@ -132,37 +136,43 @@
 
     &.header__bottom-open {
       height: 100vh;
+      width: 100%;
       opacity: 1;
       visibility: visible;
-      position: static;
-    }
+      position: fixed;
+      top: 125px;
 
-    & .navigation__item:nth-child(6) {
-      margin-bottom: 25px;
+      & .navigation__item:nth-child(6) {
+        margin-bottom: 25px;
+
+        @media (max-width: $tablet) {
+          margin-bottom: 11px;
+        }
+      }
+
+      & .navigation__item:last-child {
+        margin-top: 33px;
+
+        @media (max-width: $tablet) {
+          margin-top: 20px;
+        }
+      }
+
+      & .navigation__item:nth-last-child(1) a,
+      & .navigation__item:nth-last-child(2) a,
+      & .navigation__item:nth-last-child(3) a,
+      & .navigation__item:nth-last-child(4) a {
+        color: rgba($color-white, 0.7);
+        font-size: 18px;
+      }
+
+      & .navigation__item:nth-last-child(2) {
+        transform: translateY(5px);
+      }
 
       @media (max-width: $tablet) {
-        margin-bottom: 11px;
+        top: 89px;
       }
-    }
-
-    & .navigation__item:last-child {
-      margin-top: 33px;
-
-      @media (max-width: $tablet) {
-        margin-top: 20px;
-      }
-    }
-
-    & .navigation__item:nth-last-child(1) a,
-    & .navigation__item:nth-last-child(2) a,
-    & .navigation__item:nth-last-child(3) a,
-    & .navigation__item:nth-last-child(4) a {
-      color: rgba($color-white, 0.7);
-      font-size: 18px;
-    }
-
-    & .navigation__item:nth-last-child(2) {
-      transform: translateY(5px);
     }
   }
 }

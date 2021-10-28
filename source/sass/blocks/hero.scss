@@ -80,6 +80,14 @@
   transform: translate(-50%, -50%);
   color: $color-white;
   text-align: center;
+
+  @media (max-width: $desktop) {
+    transform: translate(-53%, -50%);
+  }
+
+  @media (max-width: $tablet) {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .hero__text h2 {

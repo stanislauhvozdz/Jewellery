@@ -40,6 +40,10 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(min-content, 300px);
     row-gap: 50px;
+
+    .article {
+      aspect-ratio: 2.27 / 1;
+    }
   }
 
   @media (max-width: $tablet) {
@@ -48,6 +52,10 @@
     gap: 0;
     row-gap: 40px;
     padding: 0 100px;
+
+    .article {
+      aspect-ratio: 1 / 1.77;
+    }
   }
 
   @media (max-width: 550px) {

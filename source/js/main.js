@@ -15,16 +15,10 @@ try {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      // type: "fraction",
       type: 'custom',
       renderCustom: function (swiper, current, total) {
           return current + ' of ' + (total - 1);
       }
-
-
-      // renderBullet: function (index, className) {
-      //   return '<span class="' + className + '">' + (index + 1) + '</span>';
-      // },
     },
 
     breakpoints: {
@@ -163,35 +157,6 @@ try {
   })
 } catch {};
 
-// Filter toggle
-try {
-  const isEscKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
-
-  let filterCatalog = document.querySelector('.catalog__filter')
-  let filterToggle = document.querySelector('.catalog__filter-toggle')
-  let closePopupButton = document.querySelector('#form-close')
-
-  filterToggle.addEventListener('click', () => {
-    filterCatalog.classList.add('active')
-  })
-
-  closePopupButton.addEventListener('click', () => {
-    filterCatalog.classList.remove('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (e.target === filterCatalog) {
-      filterCatalog.classList.remove('active');
-    }
-  });
-
-  document.addEventListener('keydown', (evt) => {
-    if (isEscKey(evt)) {
-      filterCatalog.classList.remove('active');
-    }
-  });
-} catch {}
-
 // Range slider
 try {
 
@@ -236,3 +201,41 @@ try {
     }
   }
 } catch {}
+
+// Filter toggle
+try {
+  let pageBody = document.querySelector('.page__body');
+  let popupFilter = document.querySelector('.popup-filter');
+  let filterToggle = document.querySelector('.catalog__filter-toggle')
+
+  filterToggle.addEventListener('click', () => {
+    const isEscKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
+    let closePopupButton = popupFilter.querySelector('#form-close')
+
+    popupFilter.classList.add('popup--active')
+    pageBody.classList.add('_no-scroll');
+
+
+    closePopupButton.addEventListener('click', () => {
+      popupFilter.classList.remove('popup--active');
+      pageBody.classList.remove('_no-scroll');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (e.target === popupFilter) {
+        popupFilter.classList.remove('popup--active');
+        pageBody.classList.remove('_no-scroll');
+      }
+    });
+
+    document.addEventListener('keydown', (evt) => {
+      if (isEscKey(evt)) {
+        popupFilter.classList.remove('popup--active');
+        pageBody.classList.remove('_no-scroll');
+      }
+    });
+
+  })
+} catch {}
+
+

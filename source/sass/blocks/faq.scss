@@ -39,6 +39,11 @@
 
   @media (max-width: $tablet) {
     padding: 15px 23px 20px;
+
+    & button {
+      position: relative;
+      top: -12px;
+    }
   }
 }
 

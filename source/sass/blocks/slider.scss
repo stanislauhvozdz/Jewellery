@@ -3,15 +3,16 @@
   margin-bottom: 115px;
 
   .product__image {
-    height: 284px;
+    // height: 284px;
+    aspect-ratio: 0.95 / 1;
 
-    @media (max-width: $desktop) {
-      height: 340px;
-    }
+    // @media (max-width: $desktop) {
+    //   // height: 340px;
+    // }
 
-    @media (max-width: 600px) {
-      height: 136px;
-    }
+    // @media (max-width: 600px) {
+    //   height: 136px;
+    // }
   }
 
   @media (max-width: $desktop) {

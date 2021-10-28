@@ -7,7 +7,7 @@
 .form-login__close {
   cursor: pointer;
   position: absolute;
-  right: 14px;
+  right: 20px;
   top: 20px;
   border: none;
   background-color: transparent;
@@ -15,7 +15,7 @@
 
   @media (max-width: $tablet) {
     top: 15px;
-    right: 9px;
+    right: 15px;
 
     & .form-login__close-icon {
       width: 14px;
@@ -41,6 +41,7 @@
 
     @media (max-width: $tablet) {
       height: 84px;
+      padding-bottom: 24px;
     }
   }
 
@@ -79,7 +80,7 @@
     margin-bottom: 22px;
 
     @media (max-width: $tablet) {
-      margin-bottom: 15px;
+      margin-bottom: 19px;
     }
   }
 }
@@ -95,6 +96,10 @@
     font-size: 14px;
     line-height: 21px;
     color: $color-text-second;
+  }
+
+  @media (max-width: $tablet) {
+    padding-bottom: 10px;
   }
 }
 
