@@ -1,4 +1,17 @@
 .popup-filter {
+  &.popup {
+    background-color: $color-white;
+  }
+
+  .popup__overlay {
+    justify-content: flex-start;
+    margin-left: -30px;
+
+    @media (max-width: $tablet) {
+      margin-left: auto;
+    }
+  }
+
   .catalog__filter {
     position: static;
     opacity: 1;
